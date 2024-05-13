@@ -14,7 +14,7 @@
    
 
 ### Extra credit task:  
-1. Additionally implement the following functionality:
+Additionally implement the following functionality:
  
     -if the value 1 is entered in the properties file - parse the document using SAX  
     -if the value 2 is entered in the properties file - parse the document using DOM
