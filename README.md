@@ -3,7 +3,7 @@
 ## Tasks
 
 ### Mandatory task:  
-0. Write a program to parse an xml document.  
+0. Write a program to parse xml document.  
 
    The program receives as input a string to the folder where the document is located.
    You only need to parse one document - accordingly, provide various checks, for example, that there are no files in the folder, or that there are several xml documents in the folder and other possible checks.
