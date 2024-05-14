@@ -3,7 +3,7 @@
 ## Tasks
 
 ### Mandatory task:  
-0. Write a program to parse an xml document.  
+0. Write a program to parse xml document.  
 
    The program receives as input a string to the folder where the document is located.
    You only need to parse one document - accordingly, provide various checks, for example, that there are no files in the folder, or that there are several xml documents in the folder and other possible checks.
@@ -14,7 +14,7 @@
    
 
 ### Extra credit task:  
-1. Additionally implement the following functionality:
+Additionally implement the following functionality:
  
     -if the value 1 is entered in the properties file - parse the document using SAX  
     -if the value 2 is entered in the properties file - parse the document using DOM
