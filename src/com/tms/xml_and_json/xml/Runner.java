@@ -35,9 +35,9 @@ public class Runner {
 //        StAX
         StaxParser staxParser = new StaxParser();
 
-        saxParser.process("file:hw.xml");
+//        saxParser.process("file:hw.xml");
         domParser.process("file:hw.xml");
-        staxParser.process("file:hw.xml");
+//        staxParser.process("file:hw.xml");
     }
 
 
