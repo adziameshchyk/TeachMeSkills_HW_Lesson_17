@@ -42,7 +42,7 @@ public class BookHandler extends DefaultHandler {
 
             DocumentHandler documentHandler = DocumentHandler.getInstance(fileToWriteName);
             documentHandler.write(lines);
-            documentHandler.write("-----------------------Parsed using xml parser-----------------------" + "\n");
+            documentHandler.write("-----------------------Parsed using SAX parser-----------------------" + "\n");
         }
     }
 }

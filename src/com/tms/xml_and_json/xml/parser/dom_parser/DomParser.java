@@ -46,7 +46,7 @@ public class DomParser implements IParser {
 
         DocumentHandler documentHandler = DocumentHandler.getInstance(fileToWriteName);
         documentHandler.write(lines);
-        documentHandler.write("-----------------------Parsed using dom parser-----------------------" + "\n");
+        documentHandler.write("-----------------------Parsed using DOM parser-----------------------" + "\n");
     }
 
 }
