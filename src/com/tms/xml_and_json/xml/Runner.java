@@ -1,9 +1,14 @@
 package com.tms.xml_and_json.xml;
 
 import com.tms.xml_and_json.xml.model.DocumentHandler;
+import com.tms.xml_and_json.xml.parser.IParser;
 import com.tms.xml_and_json.xml.parser.dom_parser.DomParser;
 import com.tms.xml_and_json.xml.parser.sax_parser.SaxParser;
 import com.tms.xml_and_json.xml.parser.stax_parser.StaxParser;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 /**
  * Task:
@@ -25,21 +30,26 @@ import com.tms.xml_and_json.xml.parser.stax_parser.StaxParser;
 
 public class Runner {
 
+    public static final String PROPERTIES_PATH = "C:\\Java\\JavaLearn\\Lessons\\17. Основы работы с XML и JSON\\Домашнее задание\\TMSHomeWorkLesson17\\src\\resources\\app.properties";
+
     public static void main(String[] args) {
-//        SAX
-        SaxParser saxParser = new SaxParser();
 
-//        DOM
-        DomParser domParser = new DomParser();
+        Properties appProperties = new Properties();
+        try {
+            appProperties.load(new FileInputStream(PROPERTIES_PATH));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
-//        StAX
-        StaxParser staxParser = new StaxParser();
+        IParser parser = null;
+        String choice = appProperties.getProperty("parser");
+        switch (Integer.parseInt(choice)) {
+            case 1 -> parser = new SaxParser();
+            case 2 -> parser = new DomParser();
+            case 3 -> parser = new StaxParser();
+        }
 
-        saxParser.process("file:hw.xml");
-        domParser.process("file:hw.xml");
-        staxParser.process("hw.xml");
+        parser.process("hw.xml");
     }
-
-
 
 }
